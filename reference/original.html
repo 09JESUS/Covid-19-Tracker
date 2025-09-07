@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 Tracker</title>
+    <style>
+        /* Resetting margin and padding for all elements */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .stats {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        h3 {
+            font-size: 28px;
+            margin-top: 40px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .stat-item {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #4CAF50;
+        }
+
+        img {
+            max-width: 80%;
+            border-radius: 10px;
+            margin-top: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .stat-item {
+                font-size: 18px;
+            }
+
+            img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>COVID-19 Tracker</h1>
+        <p class="stats">Track the global COVID-19 statistics in real-time.</p>
+
+        <h3>Global Statistics</h3>
+        <div class="stat-item">Total Cases: <span>{{ cases }}</span></div>
+        <div class="stat-item">Total Deaths: <span>{{ deaths }}</span></div>
+        <div class="stat-item">Total Recovered: <span>{{ recovered }}</span></div>
+        <div class="stat-item">Active Cases: <span>{{ active }}</span></div>
+        <div class="stat-item">Critical Cases: <span>{{ critical }}</span></div>
+
+        <h3>COVID-19 Global Statistics Visualization</h3>
+        <img src="data:image/png;base64,{{ img_data }}" alt="COVID-19 Statistics Pie Chart">
+
+        <div class="footer">
+            <p>Data sourced from trusted COVID-19 APIs.</p>
+        </div>
+    </div>
+</body>
+
+</html>
