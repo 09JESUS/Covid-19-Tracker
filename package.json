@@ -1,5 +1,5 @@
 {
-  "name": "my-v0-project",
+  "name": "Covid-19-tracker stats",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -66,6 +66,7 @@
     "vue-router": "latest",
     "zod": "3.25.67"
   },
+  
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.9",
     "@types/node": "^22",
